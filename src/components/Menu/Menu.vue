@@ -1,18 +1,15 @@
 <template>
-    <div class="menu">
+    <div class="menu d-flex align-items-center justify-content-center">
         <Navbar />
-        <Search />
     </div>
 </template>
 
 <script>
-import Search from '@/components/Menu/Search'
 import Navbar from '@/components/Menu/Navbar'
 
 export default {
     name: 'Menu',
     components: {
-        Search,
         Navbar
     }
 }
