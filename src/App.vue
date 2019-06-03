@@ -8,7 +8,7 @@
 
 <script>
 import Menu from '@/components/Menu/Menu'
-import Search from '@/components/Menu/Search'
+import Search from '@/components/Search'
 
 export default {
   components: {
