@@ -1,7 +1,9 @@
 <template>
   <div class="container content">
     <div class="row">
-      <Card />
+      <div class="col-12">
+        <Card />
+      </div>
     </div>
   </div>
 </template>
