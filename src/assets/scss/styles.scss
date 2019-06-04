@@ -1,3 +1,6 @@
+// VARS
+@import "vars";
+
 // VENDOR
 @import "~bootstrap/scss/bootstrap";
 
@@ -6,9 +9,6 @@
 
 // COMPONENTS
 @import "components/menu";
-
-// VARS
-@import "vars";
 
 // RESET
 @import "reset";

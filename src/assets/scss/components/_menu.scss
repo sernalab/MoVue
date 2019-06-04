@@ -1,14 +1,14 @@
 .menu{
-    background-color: #42b983;
+    background-color: $green-vue;
     height: 70px;
     .navbar {
         width: 10%;
     }
     a {
-        color: white;
+        color: $white;
         font-weight: bold;
         &.router-link-exact-active {
-            color: #2c3e50;
+            color: $soft-blue;
           }
     }
     .form-inline
