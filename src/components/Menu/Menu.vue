@@ -1,5 +1,5 @@
 <template>
-    <div class="menu col-12 d-flex align-items-center justify-content-center">
+    <div class="menu col-12 d-flex align-items-center justify-content-center mb-3">
         <Navbar />
     </div>
 </template>

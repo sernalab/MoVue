@@ -1,5 +1,5 @@
 <template>
-  <div class="custom-card mt-3">
+  <div class="custom-card">
     <div class="header d-flex justify-content-between">
       <div class="date">
         <span>12 Aug 2019</span>

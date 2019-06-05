@@ -3,10 +3,10 @@
     <div class="container-fluid">
       <div class="row">
         <Menu />
+        <Search />
+        <router-view />
       </div>
     </div>
-    <Search />
-    <router-view />
   </div>
 </template>
 
