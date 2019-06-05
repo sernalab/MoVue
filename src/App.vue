@@ -1,6 +1,10 @@
 <template>
   <div id="app">
-    <Menu />
+    <div class="container-fluid">
+      <div class="row">
+        <Menu />
+      </div>
+    </div>
     <Search />
     <router-view />
   </div>

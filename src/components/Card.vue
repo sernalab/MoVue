@@ -1,20 +1,20 @@
 <template>
-  <div class="custom-card">
-    <div class="header">
+  <div class="custom-card mt-3">
+    <div class="header d-flex justify-content-between">
       <div class="date">
-        <span>12 AUG 2019</span>
+        <span>12 Aug 2019</span>
       </div>
       <div class="fav-icon">
         <a href="#" class="fa fa-heart-o"></a>
       </div>
     </div>
     <div class="data">
-      <div class="description">
-        <span class="author">Jane Doe</span>
-        <h1 class="title">
+      <div class="description d-flex flex-column">
+        <span class="author mb-3 text-left">Jane Doe</span>
+        <h1 class="title mb-4 text-left">
           <a href="#">Stranger Things: The sound of the Upside Down</a>
         </h1>
-        <p class="text">The antsy bingers of Netflix will eagerly anticipate the digital release of the Survive soundtrack, out today.</p>
+        <p class="text text-left">The antsy bingers of Netflix will eagerly anticipate the digital release of the Survive soundtrack, out today.</p>
         <a href="#" class="button">Read more</a>
       </div>
     </div>

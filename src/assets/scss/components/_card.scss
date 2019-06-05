@@ -1,7 +1,6 @@
 .custom-card {
     background: url(https://tvseriescritic.files.wordpress.com/2016/10/stranger-things-bicycle-lights-children.jpg) center / cover no-repeat;  
-    padding: 0 1.7rem;
-    width: 30%;
+    width: 35%;
     background-color: $white;
     min-height: 540px;
     position: relative;
@@ -14,44 +13,31 @@
     }
     .data {
         position: absolute;
-        bottom: 0;
+        bottom: 5%;
         transform: translateY(calc(70px + 1em));
         transition: transform 0.3s;
+        padding: 0 1em;
+        color: $white;
+        transform: translateY(calc(70px + 4em));
     }
     .header {
         color: $white;
         padding: 1em;
-        .date {
-            float: left;
-            font-size: 12px;
-        }
     }
     .fav-icon {
-        float: right;
-        margin: 0;
-        padding: 0;
-        list-style-type: none;
         a {
             color: $white;
+            font-size: 20px;
+            text-decoration: none;
         }
-        span {
-            transition: all 0.3s;
-            opacity: 0;
-            position: absolute;
-            left: 50%;
-            top: 0;
-            font-size: 10px;
-            font-weight: 700;
-            transform: translate(-50%, 0);
-        }
-    }
-    .data {
-        color: $white;
-        transform: translateY(calc(70px + 4em));
     }
     .title {
+        line-height: initial;
+        font-size: 40px;
         a {
             color: $white;
+            text-decoration: none;
+            list-style: none;
         }
     }
     .button {
@@ -59,7 +45,7 @@
         width: 100px;
         margin: 2em auto 1em;
         text-align: center;
-        font-size: 12px;
+        font-size: 14px;
         color: $white;
         line-height: 1;
         position: relative;

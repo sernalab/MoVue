@@ -1,5 +1,5 @@
 <template>
-    <div class="navbar">
+    <div class="navbar col-2">
         <router-link to="/">Home</router-link> |
         <router-link to="/fav">Favs</router-link>
     </div>
