@@ -5,16 +5,15 @@ import axios from 'axios';
 
 const host = 'https://api.themoviedb.org/3'
 const apiKey = 'api_key=0957cd8a2455b18823ab22eefbfb23c3'
-const avengers = '&language=en-US&query=avengers&page=1&include_adult=false'
 const newest = '/discover/movie?sort_by=popularity.desc'
 
 export default {
-  async getMovies() {
-    const dataMovie = await axios.get(`${host}/search/movie?${apiKey}${avengers}`)
+  async getMovies(searchText) {
+    const dataMovie = await axios.get(`${host}/search/movie?${apiKey}&language=en-US&query=${searchText}&include_adult=false`)
     return dataMovie.data.results
   },
   async getNewest() {
-    const dataMovie = await axios.get(`${host}/discover/movie?sort_by=popularity.desc&${apiKey}`)
+    const dataMovie = await axios.get(`${host}${newest}&${apiKey}`)
     return dataMovie.data.results
   }
 }
