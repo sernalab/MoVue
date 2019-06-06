@@ -19,7 +19,7 @@ export default {
   },
   async created() {
     try {
-      const movies = await MovieService.getMovies()
+      const movies = await MovieService.getNewest()
       this.movies = movies
     } catch (e) {
       console.log(e)

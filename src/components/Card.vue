@@ -8,6 +8,7 @@
       </div>
       <div class="fav-icon">
         <a href="#" class="fa fa-heart-o"></a>
+        <!-- <a href="#" class="fas fa-heart"></a> -->
       </div>
     </div>
     <div class="data">
@@ -29,9 +30,12 @@ export default {
   props: {
     movie: Object
   },
+  data: () => ({
+    displayText: false
+  }),
   computed: {
-    reversedDate: function(){
-      return this.movie.release_date = this.movie.release_date.split("-").reverse().join("-");
+    reversedDate(){
+      return this.movie.release_date.split("-").reverse().join("-");
     }
   }
 }
