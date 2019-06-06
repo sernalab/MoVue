@@ -7,11 +7,15 @@
 <script>
 // @ is an alias to /src
 import Card from '@/components/Card'
+import MovieService from '@/services/MovieService'
 
 export default {
   name: 'home',
   components: {
     Card
-  }
+  },
+  async created() {
+    const movies = await MovieService.getMovies()
+  } 
 }
 </script>
