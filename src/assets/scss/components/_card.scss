@@ -1,5 +1,4 @@
-.custom-card {
-    background: url(https://tvseriescritic.files.wordpress.com/2016/10/stranger-things-bicycle-lights-children.jpg) center / cover no-repeat;  
+.custom-card { 
     width: 25%;
     background-color: $white;
     max-height: 540px;
@@ -14,6 +13,7 @@
     }
     .data {
         position: absolute;
+        background-color: rgba(0, 0, 0, 0.5);; 
         bottom: 5%;
         transform: translateY(calc(70px + 1em));
         transition: transform 0.3s;
