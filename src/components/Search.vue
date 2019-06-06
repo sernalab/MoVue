@@ -16,15 +16,17 @@
 import MovieService from "@/services/MovieService";
 
 export default {
-    name: 'Search',
-    data:() => ({
-        searchText: ''
-    }),
-    methods: {
-        async searchingMovie(){
-            const movies = await MovieService.getMovies(this.searchText)
-        }
+  name: 'Search',
+  data:() => ({
+      searchText: ''
+  }),
+  methods: {
+    async searchingMovie(){
+      const movies = await MovieService.getMovies(this.searchText)
+      console.log('search')
+      this.$emit('updateMovies', movies)      
     }
+  }
 }
 </script>
 
