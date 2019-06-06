@@ -12,7 +12,7 @@
       <div class="description d-flex flex-column">
         <span class="author mb-3 text-left">Jane Doe</span>
         <h1 class="title mb-4 text-left">
-          <a href="#">Stranger Things: The sound of the Upside Down</a>
+          <a href="#">{{ movie.title }}</a>
         </h1>
         <p class="text text-left">The antsy bingers of Netflix will eagerly anticipate the digital release of the Survive soundtrack, out today.</p>
         <a href="#" class="button">Read more</a>
@@ -23,7 +23,10 @@
 
 <script>
 export default {  
-  name: 'Card'
+  name: 'Card',
+  props: {
+    movie: Object
+  }
 }
 </script>
 

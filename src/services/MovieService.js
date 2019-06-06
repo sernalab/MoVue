@@ -8,9 +8,9 @@ const apiKey = 'api_key=0957cd8a2455b18823ab22eefbfb23c3'
 const avengers = '&language=en-US&query=avengers&page=1&include_adult=false'
 
 export default {
-    async getMovies() {
-        const dataMovie = await axios.get(`${host}/search/movie?${apiKey}${avengers}`)
-        return dataMovie.data.results
-    }
+  async getMovies() {
+    const dataMovie = await axios.get(`${host}/search/movie?${apiKey}${avengers}`)
+    return dataMovie.data.results
+  }
 }
 

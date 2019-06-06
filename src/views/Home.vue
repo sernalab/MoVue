@@ -1,6 +1,6 @@
 <template>
   <div class="content col-12 d-flex justify-content-center">
-    <Card />
+    <Card :key="movie.id" v-for="movie in movies" :movie="movie"/>
   </div>
 </template>
 
@@ -11,11 +11,19 @@ import MovieService from '@/services/MovieService'
 
 export default {
   name: 'home',
+  data:() => ({
+    movies: undefined
+  }),
   components: {
     Card
   },
   async created() {
-    const movies = await MovieService.getMovies()
+    try {
+      const movies = await MovieService.getMovies()
+      this.movies = movies
+    } catch (e) {
+      console.log(e)
+    }
   } 
 }
 </script>
