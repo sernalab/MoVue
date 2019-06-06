@@ -3,7 +3,6 @@
     <div class="container-fluid">
       <div class="row">
         <Menu />
-        <Search />
         <router-view />
       </div>
     </div>
@@ -12,12 +11,10 @@
 
 <script>
 import Menu from '@/components/Menu/Menu'
-import Search from '@/components/Search'
 
 export default {
   components: {
-    Menu,
-    Search
+    Menu
   }
 }
 </script>
