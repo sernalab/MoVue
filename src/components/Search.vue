@@ -21,8 +21,8 @@ export default {
         searchText: ''
     }),
     methods: {
-        searchingMovie(){
-            MovieService.getMovies(this.searchText)
+        async searchingMovie(){
+            const movies = await MovieService.getMovies(this.searchText)
         }
     }
 }
