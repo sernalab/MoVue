@@ -22,7 +22,7 @@ export default {
     }),
     methods: {
         searchingMovie(){
-            getMovies()
+            MovieService.getMovies(this.searchText)
         }
     }
 }
