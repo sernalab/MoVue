@@ -30,9 +30,6 @@ export default {
   props: {
     movie: Object
   },
-  data: () => ({
-    displayText: false
-  }),
   computed: {
     reversedDate(){
       return this.movie.release_date.split("-").reverse().join("-");
