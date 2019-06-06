@@ -1,5 +1,5 @@
 <template>
-  <div class="content col-12 d-flex justify-content-center">
+  <div class="content col-12 d-flex justify-content-center flex-wrap">
     <Card :key="movie.id" v-for="movie in movies" :movie="movie"/>
   </div>
 </template>
