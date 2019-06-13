@@ -7,13 +7,11 @@
         <span>{{ reversedDate }}</span>
       </div>
       <div class="fav-icon">
-        <a href="#" class="fa fa-heart-o"></a>
-        <!-- <a href="#" class="fas fa-heart"></a> -->
+        <a href="#" class="fa fa-heart"></a>
       </div>
     </div>
     <div class="data">
       <div class="description d-flex flex-column mt-3">
-        <span class="author mb-3 text-left">Jane Doe</span>
         <h1 class="title mb-4 text-left">
           <a href="#">{{ movie.title }}</a>
         </h1>

@@ -23,7 +23,6 @@ export default {
   methods: {
     async searchingMovie(){
       const movies = await MovieService.getMovies(this.searchText)
-      console.log('search')
       this.$emit('updateMovies', movies)      
     }
   }

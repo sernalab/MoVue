@@ -28,10 +28,13 @@
     }
     .fav-icon {
         a {
-            color: $white;
+            color: $soft-red;
             font-size: 20px;
             text-decoration: none;
-        }
+            &:hover {
+                color: $red;
+            }
+        }        
     }
     .title {
         line-height: initial;
