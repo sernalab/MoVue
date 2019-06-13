@@ -7,7 +7,7 @@
         <span>{{ reversedDate }}</span>
       </div>
       <div class="fav-icon">
-        <button @click="addToFavourites(movie)" class="fa fa-heart"></button>
+        <a @click.prevent="addToFavourites(movie)" class="fa fa-heart"></a>
       </div>
     </div>
     <div class="data">
