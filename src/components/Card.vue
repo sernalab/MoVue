@@ -7,7 +7,7 @@
         <span>{{ reversedDate }}</span>
       </div>
       <div class="fav-icon">
-        <a href="#" class="fa fa-heart"></a>
+        <button @click="addToFavourites(movie)" class="fa fa-heart"></button>
       </div>
     </div>
     <div class="data">
@@ -23,6 +23,8 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
+
 export default {  
   name: 'Card',
   props: {
@@ -32,6 +34,9 @@ export default {
     reversedDate(){
       return this.movie.release_date.split("-").reverse().join("-");
     }
+  },
+  methods: {
+    ...mapActions(['addToFavourites'])
   }
 }
 </script>
