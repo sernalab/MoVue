@@ -4,6 +4,9 @@
 // VENDOR
 @import "~bootstrap/scss/bootstrap";
 
+// RESET
+@import "reset";
+
 // MAIN
 @import "index.scss";
 
@@ -11,6 +14,3 @@
 @import "components/menu";
 @import "components/card";
 @import "components/errors";
-
-// RESET
-@import "reset";
