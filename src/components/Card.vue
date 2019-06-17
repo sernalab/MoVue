@@ -1,22 +1,18 @@
 <template>
-  <div class="custom-card mx-4 mb-4" :style="{
-    'background': `url(https://image.tmdb.org/t/p/w500/${movie.poster_path}) center / cover no-repeat`
-  }">
-    <div class="header d-flex justify-content-between">
-      <div class="date">
-        <span>{{ reversedDate }}</span>
-      </div>
-      <div class="fav-icon">
-        <a @click.prevent="addToFavourites(movie)" class="fa fa-heart"></a>
-      </div>
+  <div class="custom-card" :style="{'background': `url(https://image.tmdb.org/t/p/w500/${movie.poster_path})`}">
+    <div class="custom-card__overlay">
+
     </div>
-    <div class="data">
-      <div class="description d-flex flex-column mt-3">
-        <h1 class="title mb-4 text-left">
-          <a href="#">{{ movie.title }}</a>
-        </h1>
-        <p class="text text-left">{{ movie.overview }}</p>
-        <a href="#" class="button">Read more</a>
+    <button class="fav-icon">
+      <icon class="fa fa-heart"></icon>
+    </button>
+    <div class="custom-card__content">
+      <div class="custom-card__header">
+        <h1>hi</h1>
+        <h4>Hiho</h4>
+      </div>
+      <div class="custom-card__description">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur unde vero libero id deserunt, illum velit dicta eligendi 
       </div>
     </div>
   </div>

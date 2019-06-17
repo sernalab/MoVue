@@ -1,7 +1,9 @@
 <template>
-  <div class="content col-12 d-flex justify-content-center flex-wrap">
+  <div>
     <Search @updateMovies="moviesSearched" />
-    <Card :key="movie.id" v-for="movie in movies" :movie="movie"/>
+    <div class="content col-12 d-flex justify-content-center flex-wrap">
+      <Card :key="movie.id" v-for="movie in movies" :movie="movie"/>
+    </div>
   </div>
 </template>
 
