@@ -3,7 +3,7 @@
     <div class="custom-card__overlay"></div>
     <div class="custom-card__content align-items-center">
       <button @click="addToFavourites(movie)" class="custom-card__fav-icon">
-        <icon class="fa fa-heart"></icon>
+        <i class="fa fa-heart"></i>
       </button>
       <div class="custom-card__header">
         <h1 class="custom-card__title mb-3 mt-3">{{ movie.title }}</h1>
@@ -22,6 +22,7 @@
 
 <script>
 import { mapActions } from 'vuex'
+import MovieService from '@/services/MovieService'
 
 export default {  
   name: 'Card',
@@ -34,7 +35,12 @@ export default {
     }
   },
   methods: {
-    ...mapActions(['addToFavourites'])
+    ...mapActions(['addToFavourites']),
+    async showVideo (){
+      const key = await MovieService.getKey(this.movie.id)
+      console.log(key)
+      console.log('www.youtube.com/watch?v=' + key)
+    }
   }
 }
 </script>
