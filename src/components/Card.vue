@@ -13,7 +13,7 @@
         {{ movie.overview }} 
       </div>
       <a href="#" class="mb-3 read-more">Read More</a>
-      <button class="btn btn-outline custom-card__button">
+      <button @click="showVideo()" class="btn btn-outline custom-card__button">
         Watch Trailer
       </button>
     </div>
