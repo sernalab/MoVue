@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="col-12">
     <Search @updateMovies="moviesSearched" />
     <div class="content col-12 d-flex justify-content-center flex-wrap">
       <Card :key="movie.id" v-for="movie in movies" :movie="movie"/>

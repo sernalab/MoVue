@@ -12,7 +12,7 @@
       <div class="custom-card__description mb-3">
         {{ movie.overview }} 
       </div>
-      <a href="" class="mb-3 read-more">Read More</a>
+      <a href="#" class="mb-3 read-more">Read More</a>
       <button class="btn btn-outline custom-card__button">
         Watch Trailer
       </button>

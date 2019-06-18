@@ -15,6 +15,10 @@ export default {
   async getNewest() {
     const dataMovie = await axios.get(`${host}${newest}&${apiKey}`)
     return dataMovie.data.results
+  },
+  async getKey() {
+    const dataMovie = await axios.get(`${host}/movie/`)
+    return dataMovie.data.results.key
   }
 }
 
