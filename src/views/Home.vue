@@ -4,6 +4,7 @@
     <div class="content col-12 d-flex justify-content-center flex-wrap">
       <Card :key="movie.id" v-for="movie in movies" :movie="movie"/>
     </div>
+    <Modal v-if="showModal" @close="showModal = false"/>
   </div>
 </template>
 
@@ -12,11 +13,13 @@
 import Search from '@/components/Search'
 import Card from '@/components/Card'
 import MovieService from '@/services/MovieService'
+import Modal from '@/components/Modal'
 
 export default {
   name: 'home',
   data:() => ({
-    movies: undefined
+    movies: undefined,
+    showModal: false
   }),
   methods: {
     moviesSearched(searchedMovies) {
@@ -25,7 +28,8 @@ export default {
   }, 
   components: {
     Card,
-    Search
+    Search,
+    Modal
   },
   async created() {
     try {

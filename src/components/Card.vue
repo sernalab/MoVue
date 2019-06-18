@@ -13,7 +13,7 @@
         {{ movie.overview }} 
       </div>
       <a href="#" class="mb-3 read-more">Read More</a>
-      <button type="button" class="btn btn-outline custom-card__button" :data-video-id="key" data-target="#videoModal">
+      <button id="show-modal" class="btn btn-outline custom-card__button" @click="showModal" :data-video-id="key" data-target="#videoModal">
         Watch Trailer
       </button>
     </div>
