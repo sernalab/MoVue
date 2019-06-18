@@ -18,7 +18,6 @@ export default {
   },
   async getKey(movieID) {
     const dataMovie = await axios.get(`${host}/movie/${movieID}/videos?${apiKey}`)
-    console.log(dataMovie.data.results)
     return dataMovie.data.results[0].key
   }
 }

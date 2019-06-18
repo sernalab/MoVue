@@ -13,7 +13,7 @@
         {{ movie.overview }} 
       </div>
       <a href="#" class="mb-3 read-more">Read More</a>
-      <button @click="showVideo()" class="btn btn-outline custom-card__button">
+      <button type="button" class="btn btn-outline custom-card__button" :data-video-id="key" data-target="#videoModal">
         Watch Trailer
       </button>
     </div>
@@ -26,6 +26,11 @@ import MovieService from '@/services/MovieService'
 
 export default {  
   name: 'Card',
+  data() {
+    return {
+      key: undefined
+    }
+  },
   props: {
     movie: Object
   },
@@ -34,13 +39,14 @@ export default {
       return this.movie.release_date.split("-").reverse().join("-");
     }
   },
+  async created() {
+    const key = await MovieService.getKey(this.movie.id)
+    this.key = key
+  },
   methods: {
-    ...mapActions(['addToFavourites']),
-    async showVideo (){
-      const key = await MovieService.getKey(this.movie.id)
-      console.log(key)
-      console.log('www.youtube.com/watch?v=' + key)
-    }
+    ...mapActions(['addToFavourites'])
+  },
+  mounted() {
   }
 }
 </script>
