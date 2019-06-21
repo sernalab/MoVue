@@ -13,7 +13,7 @@
         {{ movie.overview }} 
       </div>
       <a href="#" class="mb-3 read-more">Read More</a>
-      <button id="show-modal" class="btn btn-outline custom-card__button" @click="showModal" :data-video-id="key" data-target="#videoModal">
+      <button id="showModal" class="btn btn-outline custom-card__button" @click="showModal">
         Watch Trailer
       </button>
     </div>
@@ -28,7 +28,7 @@ export default {
   name: 'Card',
   data() {
     return {
-      key: undefined
+      ytKey: undefined
     }
   },
   props: {
@@ -40,11 +40,14 @@ export default {
     }
   },
   async created() {
-    const key = await MovieService.getKey(this.movie.id)
-    this.key = key
+    const ytKey = await MovieService.getKey(this.movie.id)
+    this.ytKey = ytKey
   },
   methods: {
-    ...mapActions(['addToFavourites'])
+    ...mapActions(['addToFavourites']),
+    showModal() {
+      this.$emit('showModal', this.ytKey)
+    }
   },
   mounted() {
   }

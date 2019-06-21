@@ -2,9 +2,9 @@
   <div class="col-12">
     <Search @updateMovies="moviesSearched" />
     <div class="content col-12 d-flex justify-content-center flex-wrap">
-      <Card :key="movie.id" v-for="movie in movies" :movie="movie"/>
+      <Card @showModal="showModal" :key="movie.id" v-for="movie in movies" :movie="movie"/>
     </div>
-    <Modal v-if="showModal" @close="showModal = false"/>
+    <Modal v-if="trailerId" @close="trailerId = undefined" :ytKey="trailerId"/>
   </div>
 </template>
 
@@ -19,17 +19,25 @@ export default {
   name: 'home',
   data:() => ({
     movies: undefined,
-    showModal: false
-  }),
-  methods: {
-    moviesSearched(searchedMovies) {
-      this.movies = searchedMovies
-    }
-  }, 
+    isModalVisible: false,
+    trailerId: undefined
+  }),   
   components: {
     Card,
     Search,
     Modal
+  },
+  methods: {
+    moviesSearched(searchedMovies) {
+      this.movies = searchedMovies
+    },
+    showModal(trailerId) {
+      console.log('Imn')
+      this.trailerId = trailerId;
+    },
+    closeModal() {
+      this.isModalVisible = false;
+    }
   },
   async created() {
     try {
